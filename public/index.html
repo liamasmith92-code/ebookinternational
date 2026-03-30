@@ -787,7 +787,7 @@
       }
 
       /* ── Constrói URL do checkout ── */
-      function buildCheckoutUrl(price, name) {
+      function buildCheckoutUrl(price, name, method) {
         var origin = window.location.origin;
         var path = window.location.pathname || '/';
         var base = origin + path;
@@ -799,6 +799,7 @@
         p.set('success_url', successUrl);
         p.set('cancel_url', cancelUrl);
         p.set('product_name', name);
+        p.set('method', method || 'paypal');
         return '/api/paypal-checkout?' + p.toString();
       }
 
@@ -810,8 +811,9 @@
           btn.addEventListener('click', function () {
             var name = card.getAttribute('data-name') || 'Digital Ebook';
             var price = card.getAttribute('data-price');
+            var method = (btn.getAttribute('data-method') || 'paypal').toLowerCase();
             if (!price) return;
-            window.location.href = buildCheckoutUrl(price, name);
+            window.location.href = buildCheckoutUrl(price, name, method);
           });
         });
       }
