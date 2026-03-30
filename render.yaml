@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ebooks-checkout
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SITE_NAME
+        sync: false
+        # Defina no painel Render, ex: "Readify Books" ou o nome que preferir
+      - key: PAYJSR_SECRET_KEY
+        sync: false
+        # PayJSR secret key (sk_live_... ou sk_test_...)
