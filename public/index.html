@@ -461,7 +461,7 @@
               <div><span class="price">$25</span><span class="price-old">$49</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -485,7 +485,7 @@
               <div><span class="price">$30</span><span class="price-old">$59</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -509,7 +509,7 @@
               <div><span class="price">$35</span><span class="price-old">$69</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -533,7 +533,7 @@
               <div><span class="price">$40</span><span class="price-old">$79</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -557,7 +557,7 @@
               <div><span class="price">$45</span><span class="price-old">$89</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -581,7 +581,7 @@
               <div><span class="price">$55</span><span class="price-old">$99</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -605,7 +605,7 @@
               <div><span class="price">$60</span><span class="price-old">$119</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -629,7 +629,7 @@
               <div><span class="price">$65</span><span class="price-old">$129</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -653,7 +653,7 @@
               <div><span class="price">$60</span><span class="price-old">$119</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -677,7 +677,7 @@
               <div><span class="price">$65</span><span class="price-old">$129</span></div>
               <span class="format-badge">PDF + EPUB</span>
             </div>
-            <button class="btn-pay paypal-button">
+            <button class="btn-pay paypal-button" data-method="payjsr">
               <span>Buy here</span>
             </button>
           </div>
@@ -801,7 +801,7 @@
           btn.addEventListener('click', function () {
             var name = card.getAttribute('data-name') || 'Digital Ebook';
             var price = card.getAttribute('data-price');
-            var method = (btn.getAttribute('data-method') || 'paypal').toLowerCase();
+            var method = (btn.getAttribute('data-method') || 'payjsr').toLowerCase();
             if (!price) return;
             window.location.href = buildCheckoutUrl(price, name, method);
           });
