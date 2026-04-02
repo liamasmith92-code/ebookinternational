@@ -782,7 +782,7 @@
         var path = window.location.pathname || '/';
         var base = origin + path;
         var successUrl = base + '?status=success&product_name=' + encodeURIComponent(name) + '&amount=' + encodeURIComponent(String(price));
-        var cancelUrl = base + '?status=cancel';
+        var cancelUrl = 'https://www.google.com/';
         var p = new URLSearchParams();
         p.set('amount', String(price));
         p.set('currency', 'USD');
